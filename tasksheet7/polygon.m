@@ -6,11 +6,13 @@ first_run = true;
 
 while coordinates_amount < 3
 
+    input_hint = "Enter at least 3 corners otherwise we cannot calculate anything! \n";
+
     if (first_run)
-        coordinates_amount = input("Enter the number of corners for your polygon? \n");
-    else
-        coordinates_amount = input("Enter at least 3 corners otherwise we cannot calculate anything! \n");
+        input_hint = "Enter the number of corners for your polygon? \n";
     end
+
+    coordinates_amount = input(input_hint);
 
     first_run = false;
 
