@@ -19,8 +19,7 @@ while coordinates_amount < 3
 end
 
 % predefine size of cell
-coordinates = cell(coordinates_amount + 1, 1, 1);
-
+coordinates = cell(coordinates_amount + 1, 1);
 % loop over the set coordinates_amount to set x and y values
 for coordinate_index = 1:coordinates_amount
     x_value = input(sprintf("Enter the x-value for coordinate %d \n", coordinate_index));
