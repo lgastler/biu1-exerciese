@@ -32,12 +32,12 @@ end
 coordinates{coordinates_amount + 1} = coordinates{1};
 
 % get the perimeter
-perimeter = poly_perimeter(coordinates);
+result_perimeter = poly_perimeter(coordinates);
 
 % get the area
-area = poly_area(coordinates);
+result_area = poly_area(coordinates);
 
 % coordinates clockwise
-coordinates_entered_clockwise = area >= 0;
+coordinates_entered_clockwise = result_area >= 0;
 
-fprintf("Perimeter: %g \nArea: %g \nClockwise: %s \n", perimeter, area, mat2str(coordinates_entered_clockwise));
+fprintf("Perimeter: %g \nArea: %g \nClockwise: %s \n", result_perimeter, result_area, mat2str(coordinates_entered_clockwise));
