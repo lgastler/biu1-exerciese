@@ -14,5 +14,5 @@ for testIdx = 1:length(tests)
 
     actualPrice = determinePrice(startStation, endStation, false);
 
-    fprintf("The result of %s and %s was %s \n", startStation, endStation, mat2str(resultPrice == actualPrice))
+    fprintf("The result of %s and %s was %s \n", startStation, endStation, mat2str(areEssentiallyEqual(resultPrice, actualPrice)))
 end
