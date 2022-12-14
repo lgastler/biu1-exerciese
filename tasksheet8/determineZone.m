@@ -8,13 +8,13 @@ function zone = determineZone(stop)
         case 'e'
             zone = 2;
             return
-        case 'd' || 'f' || 'h'
+        case {'d', 'f', 'h'}
             zone = 3;
             return
-        case 'c' || 'i'
+        case {'c', 'i'}
             zone = 4;
             return
-        case 'a' || 'g' || 'j'
+        case {'a', 'g', 'j'}
             zone = 5;
             return
         otherwise
