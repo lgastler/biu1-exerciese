@@ -11,9 +11,15 @@ for testIdx = 1:length(tests)
     startStation = tests(testIdx, 1);
     endStation = tests(testIdx, 2);
     resultPrice = double(tests(testIdx, 3));
-    throughCenter = logical(str2num(tests(testIdx, 4)));
+    isThroughCenter = logical(str2double(tests(testIdx, 4)));
 
-    actualPrice = determinePrice(startStation, endStation, throughCenter);
+    actualPrice = determinePrice(startStation, endStation, isThroughCenter);
+    isCorrectResult = areEssentiallyEqual(resultPrice, actualPrice);
+    msgCorrectResult = "correct";
 
-    fprintf("The result of %s and %s was %s \n", startStation, endStation, mat2str(areEssentiallyEqual(resultPrice, actualPrice)))
+    if ~isCorrectResult
+        msgCorrectResult = "incorrect";
+    end
+
+    fprintf("The result of %s and %s was EUR%.2f which is the %s result\n", startStation, endStation, actualPrice, msgCorrectResult);
 end
